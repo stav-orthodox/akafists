@@ -60,6 +60,6 @@ export default {
 </script>
 <style lang="css" scoped>
 .btn {
-   padding: 0;
+   padding: 0, 1px, 0, 1px;
 }
 </style>

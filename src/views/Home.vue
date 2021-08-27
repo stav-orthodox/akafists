@@ -8,19 +8,23 @@
          <loader v-if="loading" />
          <p v-else-if="!records.length" class="center">Записей пока нет</p>
          <section v-else>
-            <p class="center text-bolder">Реестр Акафистов</p>
-            <form class="">
-               <div class="input-field">
-                  <i class="material-icons prefix">search</i>
-                  <input
-                     v-model="search"
-                     id="icon_prefix"
-                     type="text"
-                     class="validate"
-                  />
-                  <label for="icon_prefix">Поиск</label>
-               </div>
-            </form>
+            <div class="row">
+               <p class="center text-bolder">Реестр Акафистов</p>
+               <form class="col s12">
+                  <div class="input-field">
+                     <div class="row">
+                        <i class="material-icons prefix">search</i>
+                        <input
+                           v-model="search"
+                           id="icon_prefix"
+                           type="text"
+                           class="validate"
+                        />
+                        <label for="icon_prefix">Поиск</label>
+                     </div>
+                  </div>
+               </form>
+            </div>
             <akafist-table :records="items" />
             <hr />
             <Paginate
